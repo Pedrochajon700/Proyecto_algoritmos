@@ -1,42 +1,61 @@
-ALGORITMO GestorNotasAcademicas
-
 INICIO
+
     continuar <- VERDADERO
 
     MIENTRAS continuar = VERDADERO HACER
-        IMPRIMIR "========== MENÚ PRINCIPAL =========="
-        IMPRIMIR "1. Registrar nuevo curso y nota"
-        IMPRIMIR "2. Mostrar todas las notas"
-        IMPRIMIR "3. Calcular promedio general"
-        IMPRIMIR "4. Buscar curso por nombre"
-        IMPRIMIR "5. Buscar curso por código"
-        IMPRIMIR "6. Ordenar cursos por promedio"
-        IMPRIMIR "7. Ver historial de operaciones"
-        IMPRIMIR "8. Salir"
-        IMPRIMIR "===================================="
-        IMPRIMIR "Ingrese una opción (1-8): "
+
+        IMPRIMIR "=============================="
+        IMPRIMIR "  GESTOR DE NOTAS ACADÉMICAS  "
+        IMPRIMIR "=============================="
+        IMPRIMIR " 1. Registrar nuevo curso"
+        IMPRIMIR " 2. Mostrar todos los cursos y notas"
+        IMPRIMIR " 3. Calcular promedio general"
+        IMPRIMIR " 4. Contar cursos aprobados y reprobados"
+        IMPRIMIR " 5. Buscar curso por nombre (búsqueda lineal)"
+        IMPRIMIR " 6. Actualizar nota de un curso"
+        IMPRIMIR " 7. Eliminar un curso"
+        IMPRIMIR " 8. Ordenar cursos por nota (burbuja)"
+        IMPRIMIR " 9. Ordenar cursos por nombre (inserción)"
+        IMPRIMIR "10. Buscar curso por nombre (búsqueda binaria)"
+        IMPRIMIR "11. Simular cola de solicitudes de revisión"
+        IMPRIMIR "12. Mostrar historial de cambios (pila)"
+        IMPRIMIR "13. Salir"
+        IMPRIMIR ""
+        IMPRIMIR "Seleccione una opción (1-13):"
+
         LEER opcion
 
         SI opcion = 1 ENTONCES
-            <registrar_curso_y_nota>
+            IMPRIMIR "<acción registrar nuevo curso>"
         SINO SI opcion = 2 ENTONCES
-            <mostrar_todas_las_notas>
+            IMPRIMIR "<acción mostrar todos los cursos y notas>"
         SINO SI opcion = 3 ENTONCES
-            <calcular_promedio_general>
+            IMPRIMIR "<acción calcular promedio general>"
         SINO SI opcion = 4 ENTONCES
-            <buscar_curso_por_nombre>
+            IMPRIMIR "<acción contar cursos aprobados y reprobados>"
         SINO SI opcion = 5 ENTONCES
-            <buscar_curso_por_codigo>
+            IMPRIMIR "<acción buscar curso por nombre (búsqueda lineal)>"
         SINO SI opcion = 6 ENTONCES
-            <ordenar_cursos_por_promedio>
+            IMPRIMIR "<acción actualizar nota de un curso>"
         SINO SI opcion = 7 ENTONCES
-            <ver_historial_de_operaciones>
+            IMPRIMIR "<acción eliminar un curso>"
         SINO SI opcion = 8 ENTONCES
+            IMPRIMIR "<acción ordenar cursos por nota (burbuja)>"
+        SINO SI opcion = 9 ENTONCES
+            IMPRIMIR "<acción ordenar cursos por nombre (inserción)>"
+        SINO SI opcion = 10 ENTONCES
+            IMPRIMIR "<acción buscar curso por nombre (búsqueda binaria)>"
+        SINO SI opcion = 11 ENTONCES
+            IMPRIMIR "<acción simular cola de solicitudes de revisión>"
+        SINO SI opcion = 12 ENTONCES
+            IMPRIMIR "<acción mostrar historial de cambios (pila)>"
+        SINO SI opcion = 13 ENTONCES
             IMPRIMIR "Saliendo del sistema..."
             continuar <- FALSO
         SINO
-            IMPRIMIR "Opción no válida. Intente de nuevo."
+            IMPRIMIR "Opción inválida. Por favor ingrese un número entre 1 y 13."
         FIN_SI
+
     FIN_MIENTRAS
 
 FIN
