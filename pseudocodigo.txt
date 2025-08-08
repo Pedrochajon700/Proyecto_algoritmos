@@ -1,64 +1,42 @@
+ALGORITMO GestorNotasAcademicas
+
 INICIO
-    // Inicialización de variables
-    opcion <- 0
     continuar <- VERDADERO
-    
-    // Bucle principal del menú
+
     MIENTRAS continuar = VERDADERO HACER
-        // Mostrar opciones del menú
-        IMPRIMIR "======================================"
-        IMPRIMIR "    GESTOR DE NOTAS ACADÉMICAS"
-        IMPRIMIR "======================================"
+        IMPRIMIR "========== MENÚ PRINCIPAL =========="
         IMPRIMIR "1. Registrar nuevo curso y nota"
-        IMPRIMIR "2. Mostrar todas las notas registradas"
+        IMPRIMIR "2. Mostrar todas las notas"
         IMPRIMIR "3. Calcular promedio general"
-        IMPRIMIR "4. Buscar notas por curso"
-        IMPRIMIR "5. Generar reporte de rendimiento"
-        IMPRIMIR "6. Salir del sistema"
-        IMPRIMIR "======================================"
-        IMPRIMIR "Seleccione una opción (1-6): "
-        
-        // Leer opción del usuario
+        IMPRIMIR "4. Buscar curso por nombre"
+        IMPRIMIR "5. Buscar curso por código"
+        IMPRIMIR "6. Ordenar cursos por promedio"
+        IMPRIMIR "7. Ver historial de operaciones"
+        IMPRIMIR "8. Salir"
+        IMPRIMIR "===================================="
+        IMPRIMIR "Ingrese una opción (1-8): "
         LEER opcion
-        
-        // Procesar la opción seleccionada
+
         SI opcion = 1 ENTONCES
-            IMPRIMIR "Has seleccionado: Registrar nuevo curso y nota"
-            <acción_registrar_curso>
-            
+            <registrar_curso_y_nota>
         SINO SI opcion = 2 ENTONCES
-            IMPRIMIR "Has seleccionado: Mostrar todas las notas"
-            <acción_mostrar_notas>
-            
+            <mostrar_todas_las_notas>
         SINO SI opcion = 3 ENTONCES
-            IMPRIMIR "Has seleccionado: Calcular promedio general"
-            <acción_calcular_promedio>
-            
+            <calcular_promedio_general>
         SINO SI opcion = 4 ENTONCES
-            IMPRIMIR "Has seleccionado: Buscar notas por curso"
-            <acción_buscar_curso>
-            
+            <buscar_curso_por_nombre>
         SINO SI opcion = 5 ENTONCES
-            IMPRIMIR "Has seleccionado: Generar reporte de rendimiento"
-            <acción_generar_reporte>
-            
+            <buscar_curso_por_codigo>
         SINO SI opcion = 6 ENTONCES
+            <ordenar_cursos_por_promedio>
+        SINO SI opcion = 7 ENTONCES
+            <ver_historial_de_operaciones>
+        SINO SI opcion = 8 ENTONCES
             IMPRIMIR "Saliendo del sistema..."
-            IMPRIMIR "¡Gracias por usar el Gestor de Notas Académicas!"
             continuar <- FALSO
-            
         SINO
-            IMPRIMIR "Opción inválida. Por favor seleccione una opción del 1 al 6."
-            
+            IMPRIMIR "Opción no válida. Intente de nuevo."
         FIN_SI
-        
-        // Pausa antes de mostrar el menú nuevamente (si no es salir)
-        SI continuar = VERDADERO ENTONCES
-            IMPRIMIR ""
-            IMPRIMIR "Presione Enter para continuar..."
-            LEER pausa
-        FIN_SI
-        
     FIN_MIENTRAS
-    
+
 FIN
