@@ -1,0 +1,64 @@
+INICIO
+    // Inicialización de variables
+    opcion <- 0
+    continuar <- VERDADERO
+    
+    // Bucle principal del menú
+    MIENTRAS continuar = VERDADERO HACER
+        // Mostrar opciones del menú
+        IMPRIMIR "======================================"
+        IMPRIMIR "    GESTOR DE NOTAS ACADÉMICAS"
+        IMPRIMIR "======================================"
+        IMPRIMIR "1. Registrar nuevo curso y nota"
+        IMPRIMIR "2. Mostrar todas las notas registradas"
+        IMPRIMIR "3. Calcular promedio general"
+        IMPRIMIR "4. Buscar notas por curso"
+        IMPRIMIR "5. Generar reporte de rendimiento"
+        IMPRIMIR "6. Salir del sistema"
+        IMPRIMIR "======================================"
+        IMPRIMIR "Seleccione una opción (1-6): "
+        
+        // Leer opción del usuario
+        LEER opcion
+        
+        // Procesar la opción seleccionada
+        SI opcion = 1 ENTONCES
+            IMPRIMIR "Has seleccionado: Registrar nuevo curso y nota"
+            <acción_registrar_curso>
+            
+        SINO SI opcion = 2 ENTONCES
+            IMPRIMIR "Has seleccionado: Mostrar todas las notas"
+            <acción_mostrar_notas>
+            
+        SINO SI opcion = 3 ENTONCES
+            IMPRIMIR "Has seleccionado: Calcular promedio general"
+            <acción_calcular_promedio>
+            
+        SINO SI opcion = 4 ENTONCES
+            IMPRIMIR "Has seleccionado: Buscar notas por curso"
+            <acción_buscar_curso>
+            
+        SINO SI opcion = 5 ENTONCES
+            IMPRIMIR "Has seleccionado: Generar reporte de rendimiento"
+            <acción_generar_reporte>
+            
+        SINO SI opcion = 6 ENTONCES
+            IMPRIMIR "Saliendo del sistema..."
+            IMPRIMIR "¡Gracias por usar el Gestor de Notas Académicas!"
+            continuar <- FALSO
+            
+        SINO
+            IMPRIMIR "Opción inválida. Por favor seleccione una opción del 1 al 6."
+            
+        FIN_SI
+        
+        // Pausa antes de mostrar el menú nuevamente (si no es salir)
+        SI continuar = VERDADERO ENTONCES
+            IMPRIMIR ""
+            IMPRIMIR "Presione Enter para continuar..."
+            LEER pausa
+        FIN_SI
+        
+    FIN_MIENTRAS
+    
+FIN
