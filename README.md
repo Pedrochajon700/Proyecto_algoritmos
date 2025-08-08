@@ -1,23 +1,30 @@
-# Gestor de Notas Académicas
+Gestor de Notas Académicas
+Redacción del Problema
+El Gestor de Notas Académicas es un sistema pensado para ayudar a estudiantes universitarios a llevar un control ordenado de sus calificaciones. Muchas veces tenemos varios cursos al mismo tiempo, cada uno con diferentes evaluaciones y ponderaciones, y es fácil perder el control de las notas y del promedio general.
 
-## Redacción del Problema
-El **Gestor de Notas Académicas** es un sistema diseñado para que estudiantes universitarios y de educación superior puedan registrar, organizar y consultar sus calificaciones de manera ordenada y accesible. En el contexto académico actual, los estudiantes manejan múltiples cursos con diferentes tipos de evaluaciones, ponderaciones y criterios de calificación, lo que puede dificultar el seguimiento adecuado de su rendimiento.
+Con este sistema podremos registrar cursos, añadir sus notas y calcular automáticamente el promedio, todo desde una interfaz sencilla en consola. También nos permite buscar cursos específicos, ver cuáles son nuestras mejores y peores calificaciones, y así tomar decisiones para mejorar nuestro rendimiento académico.
 
-Este sistema está dirigido a estudiantes que necesitan una herramienta sencilla pero funcional para centralizar la información de sus notas, calcular promedios y detectar materias con bajo desempeño. La aplicación busca cubrir la necesidad de tener un control claro del progreso académico, facilitando la toma de decisiones para mejorar el rendimiento.
+El programa está dirigido a cualquier estudiante que quiera una forma simple y sin complicaciones para organizar su información académica, sin necesidad de hojas de cálculo ni programas externos.
 
-El objetivo principal es ofrecer una solución práctica que permita registrar cursos y evaluaciones, calcular automáticamente el promedio general ponderado, y generar reportes que identifiquen fortalezas y áreas de mejora, todo desde una interfaz de consola intuitiva.
+Requisitos Funcionales
+El menú del sistema deberá permitir como mínimo:
 
-## Requisitos del Sistema
+Registrar un nuevo curso con sus evaluaciones y ponderaciones.
 
-### Requisitos Funcionales
-1. **Registrar nuevo curso y nota:** Permitir al usuario ingresar un curso, el tipo de evaluación, la nota y su ponderación.
-2. **Mostrar todas las notas registradas:** Listar todos los cursos y evaluaciones ingresadas.
-3. **Calcular promedio general:** Calcular automáticamente el promedio ponderado de todas las evaluaciones.
-4. **Buscar notas por curso:** Localizar un curso específico y mostrar todas sus evaluaciones.
-5. **Generar reporte de rendimiento:** Identificar los cursos con mejor y peor desempeño.
+Mostrar todas las notas registradas de forma clara.
 
-### Requisitos No Funcionales
-- El sistema se ejecutará **exclusivamente en consola** usando **Python**.
-- No se permitirá el uso de **librerías externas**.
-- La implementación debe utilizar **bucles** y **condicionales**, además de estructuras como listas.
-- El diseño del menú se realizará en pseudocódigo antes de la programación.
+Calcular el promedio general ponderado de todos los cursos.
+
+Buscar notas por nombre de curso.
+
+Generar un reporte con las materias de mejor y peor rendimiento.
+
+⚙️ Requisitos No Funcionales
+El sistema se desarrollará exclusivamente en Python y se ejecutará en consola.
+
+No se permite el uso de librerías externas, solo funciones y estructuras básicas del lenguaje.
+
+El programa debe utilizar bucles y condicionales, tal como se detalla en el pseudocódigo.
+
+El código estará organizado en funciones modulares para facilitar su mantenimiento.
+
