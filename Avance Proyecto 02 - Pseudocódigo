@@ -1,0 +1,48 @@
+# ============================================
+# Avance Proyecto 02 - Pseudocódigo
+# Funcionalidad: Registrar notas y calcular promedio
+# ============================================
+
+INICIO
+
+    # Lista para guardar las notas
+    notas ← []
+
+    # Bucle para ingresar varias notas
+    MIENTRAS VERDADERO HACER
+        IMPRIMIR "Ingrese una nota (o escriba -1 para terminar): "
+        LEER nota
+
+        # Validar que no esté vacío
+        SI nota = "" ENTONCES
+            IMPRIMIR "Error: la nota no puede estar vacía"
+        SINO
+            # Validar que sea número
+            SI nota ES NUMÉRICO ENTONCES
+                SI nota = -1 ENTONCES
+                    # Salir del registro de notas
+                    SALIR_DEL_BUCLE
+                SINO
+                    AGREGAR nota A notas
+                FIN_SI
+            SINO
+                IMPRIMIR "Error: debe ingresar un valor numérico"
+            FIN_SI
+        FIN_SI
+    FIN_MIENTRAS
+
+    # Validar que existan notas antes de calcular
+    SI LONGITUD(notas) > 0 ENTONCES
+        suma ← 0
+        PARA cada n EN notas HACER
+            suma ← suma + n
+        FIN_PARA
+
+        promedio ← suma / LONGITUD(notas)
+
+        IMPRIMIR "El promedio de las notas es: ", promedio
+    SINO
+        IMPRIMIR "No se ingresaron notas válidas."
+    FIN_SI
+
+FIN
