@@ -10,13 +10,14 @@ def imprimir_menu():
     print(" 4. Contar cursos aprobados y reprobados")
     print(" 5. Buscar curso por nombre")
     print(" 6. Actualizar nota de un curso")
+    print(" 7. Eliminar un curso")
     print("13. Salir")
 
 def leer_opcion():
-    entrada = input("Seleccione una opción (1-6, 13): ")
+    entrada = input("Seleccione una opción (1-7, 13): ")
     try:
         opcion = int(entrada)
-        if opcion in [1, 2, 3, 4, 5, 6, 13]:
+        if opcion in [1, 2, 3, 4, 5, 6, 7, 13]:
             return opcion
         return -1
     except ValueError:
@@ -151,6 +152,19 @@ def actualizar_nota():
     if not encontrado:
         print("Curso no encontrado")
 
+def eliminar_curso():
+    if len(cursos) == 0:
+        print("No hay cursos registrados")
+        return
+    
+    nombre_buscar = input("Ingrese el nombre del curso a eliminar: ")
+    for i in range(len(cursos)):
+        if cursos[i]['nombre'].lower() == nombre_buscar.lower():
+            del cursos[i]
+            print("Curso eliminado exitosamente")
+            return
+    print("Curso no encontrado")
+
 def main():
     while True:
         imprimir_menu()
@@ -168,6 +182,8 @@ def main():
             buscar_por_nombre()
         elif opcion == 6:
             actualizar_nota()
+        elif opcion == 7:
+            eliminar_curso()
         elif opcion == 13:
             print("Saliendo del sistema...")
             break
@@ -176,5 +192,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-    
