@@ -25,6 +25,9 @@ El menú del sistema debe incluir al menos las siguientes funciones:
 - Debe implementar **bucles** y **condicionales** según el pseudocódigo diseñado.  
 
 
+
+
+
 📘 Explicación del proyecto
 
 En este avance del proyecto se implementaron las siguientes mejoras:
@@ -49,9 +52,9 @@ Esto mejora la legibilidad, el mantenimiento y la reutilización del código.
 
 🧩 Modularización
 
-El código se dividió en módulos (archivos .py separados) para organizar mejor las diferentes partes del programa.
+El código se dividió en módulos para organizar mejor las diferentes partes del programa.
 Por ejemplo, un archivo puede contener la lógica de los cursos y otro el archivo principal que ejecuta el programa.
-Esto facilita trabajar en equipo y mantener el proyecto conforme crece.
+
 
 🗑 Eliminación de cursos
 
