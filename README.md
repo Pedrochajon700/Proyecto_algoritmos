@@ -23,3 +23,37 @@ El menú del sistema debe incluir al menos las siguientes funciones:
 - Ejecución únicamente por **línea de comandos** (consola).  
 - **No** se permite el uso de librerías externas, solo funciones y estructuras básicas de Python.  
 - Debe implementar **bucles** y **condicionales** según el pseudocódigo diseñado.  
+
+
+📘 Explicación del proyecto
+
+En este avance del proyecto se implementaron las siguientes mejoras:
+
+🗂 Uso de listas
+
+Se utilizó una lista para almacenar los cursos registrados, lo cual permite manejar múltiples elementos de manera dinámica (agregar, mostrar y eliminar cursos).
+Esto facilita la gestión de los datos sin necesidad de usar estructuras más complejas.
+
+⚙️ Funciones
+
+Se organizó el código en funciones para dividir el programa en tareas específicas y reutilizables.
+Por ejemplo:
+
+agregar_curso() para registrar un nuevo curso.
+
+mostrar_cursos() para listar los cursos existentes.
+
+eliminar_curso() para borrar un curso de la lista.
+
+Esto mejora la legibilidad, el mantenimiento y la reutilización del código.
+
+🧩 Modularización
+
+El código se dividió en módulos (archivos .py separados) para organizar mejor las diferentes partes del programa.
+Por ejemplo, un archivo puede contener la lógica de los cursos y otro el archivo principal que ejecuta el programa.
+Esto facilita trabajar en equipo y mantener el proyecto conforme crece.
+
+🗑 Eliminación de cursos
+
+Se añadió la función de eliminar cursos que permite al usuario seleccionar un curso específico y quitarlo de la lista.
+Esto hace que el sistema sea más flexible y realista, ya que los cursos pueden cambiar con el tiempo.
