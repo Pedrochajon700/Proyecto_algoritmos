@@ -1,0 +1,189 @@
+Manual Técnico - Gestor de Notas Académicas
+Descripción General
+Programa en Python que gestiona calificaciones usando estructuras de datos y algoritmos básicos.
+Tecnología
+
+Lenguaje: Python 3.x
+Tipo: Programa de consola
+Dependencias: Ninguna
+
+Organización del Código
+El programa está dividido en 10 secciones:
+
+Variables globales
+Funciones de validación
+Funciones de menú
+Funciones principales (CRUD)
+Funciones de búsqueda
+Funciones de actualización
+Algoritmos de ordenamiento
+Funciones de cola
+Funciones de pila
+Programa principal
+
+Variables Globales
+
+pythoncursos = []              # Lista de todos los cursos
+historial = []           # Pila del historial de acciones
+cola_revision = []       # Cola de cursos en revisión
+contador_cursos = 0      # Contador para asignar IDs
+Estructura de un Curso
+python{
+    "id": 1,              # ID único
+    "codigo": "MAT101",   # Código del curso
+    "nombre": "Matematicas I",
+    "nota": 85.5,         # Entre 0 y 100
+    "creditos": 4         # Entre 1 y 10
+}
+
+
+Funciones de Validación
+validar_nota(nota)
+
+Verifica que nota esté entre 0 y 100
+Retorna: True o False
+
+validar_creditos(creditos)
+
+Verifica que créditos esté entre 1 y 10
+Retorna: True o False
+
+validar_opcion_menu(opcion)
+
+Verifica que opción esté entre 1 y 15
+Retorna: True o False
+
+Búsqueda Lineal
+pythondef buscar_por_nombre():
+    for i in range(len(cursos)):
+        if cursos[i]['nombre'].lower() == nombre_buscar.lower():
+            # Encontrado
+
+Complejidad: O(n)
+Revisa cada elemento uno por uno
+Funciona con lista desordenada
+Lenta para muchos datos
+
+Búsqueda Binaria
+pythondef buscar_por_codigo_binaria():
+    ordenar_seleccion_por_codigo()  # Ordena primero
+    
+    izquierda = 0
+    derecha = len(cursos) - 1
+    
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+        
+        if cursos[medio]['codigo'] == codigo_buscar:
+            # Encontrado
+            break
+
+Complejidad: O(log n)
+Divide la lista por la mitad cada vez
+Requiere lista ordenada
+Mucho más rápida que lineal
+
+Ordenamiento Burbuja
+pythondef ordenar_burbuja():
+    for i in range(n - 1):
+        for j in range(n - i - 1):
+            if cursos[j]['nota'] > cursos[j + 1]['nota']:
+                # Intercambiar
+
+Complejidad: O(n²)
+Compara elementos vecinos
+Intercambia si están mal ordenados
+Simple pero lenta
+
+Ordenamiento Inserción
+pythondef ordenar_insercion():
+    for i in range(1, n):
+        key = cursos[i]
+        j = i - 1
+        while j >= 0 and cursos[j]['nombre'].lower() > key['nombre'].lower():
+            cursos[j + 1] = cursos[j]
+            j -= 1
+        cursos[j + 1] = key
+
+Complejidad: O(n²)
+Inserta cada elemento en posición correcta
+Como organizar cartas en la mano
+Buena para listas pequeñas
+
+Ordenamiento Selección
+pythondef ordenar_seleccion_por_codigo():
+    for i in range(n - 1):
+        min_idx = i
+        for j in range(i + 1, n):
+            if cursos[j]['codigo'].lower() < cursos[min_idx]['codigo'].lower():
+                min_idx = j
+        
+        if min_idx != i:
+            # Intercambiar
+
+Complejidad: O(n²)
+Encuentra el mínimo
+Lo coloca en posición correcta
+Repite con el resto
+
+Pila (LIFO)
+Estructura usada para el historial.
+pythonhistorial = []
+
+# Agregar
+historial.append("Acción 1")
+historial.append("Acción 2")
+
+# Ver último primero
+for i in range(len(historial) - 1, -1, -1):
+    print(historial[i])
+
+Último en entrar, primero en salir
+append() agrega al final
+pop() saca del final
+Ideal para historial
+
+Cola (FIFO)
+Estructura usada para la cola de revisión.
+pythoncola_revision = []
+
+# Agregar
+cola_revision.append(curso1)
+cola_revision.append(curso2)
+
+# Atender
+curso = cola_revision.pop(0)
+
+Primero en entrar, primero en salir
+append() agrega al final
+pop(0) saca del inicio
+Como una fila real
+
+Flujo del Programa
+
+Mostrar menú
+Leer opción
+Validar opción
+Ejecutar función
+Mostrar resultado
+Esperar Enter
+Volver al paso 1
+
+Este bucle continúa hasta que el usuario elige "Salir".
+Complejidad de Algoritmos
+AlgoritmoComplejidadDescripciónBúsqueda LinealO(n)Revisa todos los elementosBúsqueda BinariaO(log n)Divide la lista por mitadBurbujaO(n²)Compara adyacentesInserciónO(n²)Inserta en posición correctaSelecciónO(n²)Encuentra mínimo y lo mueve
+Funciones Principales
+registrar_curso(): Agrega nuevo curso con validaciones
+mostrar_cursos(): Imprime tabla de todos los cursos
+calcular_promedio(): Calcula promedio ponderado
+contar_aprobados_reprobados(): Cuenta cursos aprobados (≥61) y reprobados (<61)
+buscar_por_nombre(): Búsqueda lineal por nombre
+buscar_por_codigo_binaria(): Búsqueda binaria por código
+actualizar_nota(): Cambia la nota de un curso
+eliminar_curso(): Borra un curso
+ordenar_burbuja(): Ordena por nota (burbuja)
+ordenar_insercion(): Ordena por nombre (inserción)
+ordenar_seleccion_por_codigo(): Ordena por código (selección)
+agregar_revision(): Agrega curso a cola
+atender_revision(): Atiende primer curso de cola
+mostrar_historial(): Muestra historial (pila)
