@@ -1,0 +1,104 @@
+Manual de Usuario - Gestor de Notas Académicas
+Instalación
+No requiere instalación. Solo necesitas Python 3 instalado en tu computadora.
+Cómo ejecutar
+Abre la terminal y escribe:
+bashpython gestor_notas.py
+Opciones del menú
+1. Registrar nuevo curso
+Agrega un nuevo curso con su código, nombre, nota y créditos.
+
+Código: Identificador único
+Nombre: Nombre del curso 
+Nota: Entre 0 y 100
+Créditos: Entre 1 y 10
+
+2. Mostrar todos los cursos y notas
+Muestra una tabla con todos los cursos registrados incluyendo ID, código, nombre, nota y créditos.
+3. Calcular promedio general
+Calcula el promedio ponderado de todos tus cursos.
+Fórmula: (Suma de notas × créditos) / Total de créditos
+4. Contar cursos aprobados y reprobados
+Muestra cuántos cursos aprobaste (nota ≥ 61) y cuántos reprobaste (nota < 61).
+5. Buscar curso por nombre
+Busca un curso escribiendo su nombre. Utiliza búsqueda lineal.
+6. Buscar curso por código
+Busca un curso por su código. Utiliza búsqueda binaria (más rápida). La lista se ordena automáticamente.
+7. Actualizar nota de un curso
+Cambia la nota de un curso existente.
+8. Eliminar un curso
+Borra un curso completamente del sistema.
+9. Ordenar cursos por nota (Burbuja)
+Ordena todos los cursos de menor a mayor nota usando el algoritmo de burbuja.
+10. Ordenar cursos por nombre (Inserción)
+Ordena todos los cursos alfabéticamente por nombre usando el algoritmo de inserción.
+11. Ordenar cursos por código (Selección)
+Ordena todos los cursos alfabéticamente por código usando el algoritmo de selección.
+12. Agregar curso a revisión (Cola)
+Agrega un curso a la cola de revisión. Se atienden en el orden que fueron agregados.
+13. Atender revisión
+Atiende el primer curso en la cola de revisión y lo elimina de ahí.
+14. Mostrar historial de acciones (Pila)
+Muestra el historial de todas las acciones realizadas. Las más recientes aparecen primero.
+15. Salir
+Cierra el programa.
+Estructura de datos
+Curso
+Cada curso almacena:
+
+ID: Número único
+Código: Identificador (ej: MAT101)
+Nombre: Nombre completo del curso
+Nota: Calificación (0-100)
+Créditos: Unidades de valor (1-10)
+
+Lista de cursos
+Almacena todos los cursos registrados.
+Pila (Historial)
+Registra todas las acciones. El último en entrar es el primero en mostrarse.
+Cola (Revisión)
+Guarda cursos en espera de revisión. El primero en entrar es el primero en atenderse.
+Algoritmos
+Búsqueda Lineal
+Busca comparando cada elemento uno por uno hasta encontrar el buscado.
+
+Uso: Opción 5 (Buscar por nombre)
+Complejidad: O(n)
+
+Búsqueda Binaria
+Divide la lista por la mitad repetidamente. Mucho más rápida pero requiere lista ordenada.
+
+Uso: Opción 6 (Buscar por código)
+Complejidad: O(log n)
+
+Ordenamiento Burbuja
+Compara elementos vecinos e intercambia si están en orden incorrecto.
+
+Uso: Opción 9
+Complejidad: O(n²)
+
+Ordenamiento Inserción
+Inserta cada elemento en la posición correcta de la parte ya ordenada.
+
+Uso: Opción 10
+Complejidad: O(n²)
+
+Ordenamiento Selección
+Encuentra el mínimo y lo coloca al inicio, repite con el resto.
+
+Uso: Opción 11
+Complejidad: O(n²)
+
+Validaciones
+El programa valida:
+
+Notas: Deben estar entre 0 y 100
+Créditos: Deben estar entre 1 y 10
+Códigos: No pueden estar vacíos ni duplicados
+Nombres: Deben tener al menos 3 caracteres
+Opciones: Deben estar entre 1 y 15
+
+Requisitos
+
+Python 3.x
+No requiere bibliotecas externas
